@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp_bitcore = require('bitcore-build');
+var gulp_digibyte = require('digibyte-build');
 
-gulp_bitcore('mnemonic');
+gulp_digibyte('mnemonic');
 
