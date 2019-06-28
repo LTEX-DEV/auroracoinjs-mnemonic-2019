@@ -1,6 +1,6 @@
 {
   "name": "digibytejs-mnemonic",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "BIP39 Mnemonics implemented for digibytejs.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
@@ -42,7 +42,7 @@
     "mocha": "^2.2.5"
   },
   "dependencies": {
-    "digibyte": "^0.15.1",
+    "digibyte": "^0.15.2",
     "unorm": "^1.3.3"
   }
 }
