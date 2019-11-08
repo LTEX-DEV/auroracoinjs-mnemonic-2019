@@ -1,7 +1,7 @@
 {
-  "name": "digibytejs-mnemonic",
+  "name": "auroracoinjs-mnemonic",
   "version": "1.5.2",
-  "description": "BIP39 Mnemonics implemented for digibytejs.",
+  "description": "BIP39 Mnemonics implemented for auroracoinjs.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -22,11 +22,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/digibyte-core/digibytejs-mnemonic.git"
+    "url": "https://github.com/LTEX-DEV/auroracoinjs-mnemonic-2019.git"
   },
   "keywords": [
     "bitcoin",
-    "digibyte",
+    "auroracoin",
     "mnemonic",
     "crypto",
     "cryptography",
@@ -35,14 +35,14 @@
   "license": "MIT",
   "devDependencies": {
     "assert": "^1.1.2",
-    "digibyte-build": "git://github.com/digibyte-core/digibyte-build.git",
+    "auroracoin-build": "git://github.com/LTEX-DEV/auroracoin-build-2019.git",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
     "mocha": "^2.2.5"
   },
   "dependencies": {
-    "digibyte": "^0.15.2",
+    "auroracoin": "git://github.com/LTEX-DEV/bitcore-lib-2019.git",
     "unorm": "^1.3.3"
   }
 }

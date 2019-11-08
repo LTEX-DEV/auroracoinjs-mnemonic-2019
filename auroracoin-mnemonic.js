@@ -3,7 +3,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
 
 var spec = {
   name: 'Mnemonic',
-  message: 'Internal Error on digibytejs-mnemonic module {0}',
+  message: 'Internal Error on auroracoinjs-mnemonic module {0}',
   errors: [{
     name: 'InvalidEntropy',
     message: 'Entropy length must be an even multiple of 11 bits: {0}'
@@ -16,24 +16,24 @@ var spec = {
   }]
 };
 
-module.exports = require('digibyte').errors.extend(spec);
+module.exports = require('auroracoin').errors.extend(spec);
 
-},{"digibyte":"digibyte"}],2:[function(require,module,exports){
+},{"auroracoin":"auroracoin"}],2:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var digibyte = require('digibyte');
-var BN = digibyte.crypto.BN;
+var auroracoin = require('auroracoin');
+var BN = auroracoin.crypto.BN;
 var unorm = require('unorm');
-var _ = digibyte.deps._;
+var _ = auroracoin.deps._;
 
 var pbkdf2 = require('./pbkdf2');
 var errors = require('./errors');
 
-var Hash = digibyte.crypto.Hash;
-var Random = digibyte.crypto.Random;
+var Hash = auroracoin.crypto.Hash;
+var Random = auroracoin.crypto.Random;
 
-var $ = digibyte.util.preconditions;
+var $ = auroracoin.util.preconditions;
 
 
 /**
@@ -77,7 +77,7 @@ var Mnemonic = function(data, wordlist) {
   } else if (_.isNumber(data)) {
     ent = data;
   } else if (data) {
-    throw new digibyte.errors.InvalidArgument('data', 'Must be a Buffer, a string or an integer');
+    throw new auroracoin.errors.InvalidArgument('data', 'Must be a Buffer, a string or an integer');
   }
   ent = ent || 128;
 
@@ -99,7 +99,7 @@ var Mnemonic = function(data, wordlist) {
     throw new errors.InvalidMnemonic(phrase);
   }
   if (ent % 32 !== 0 || ent < 128) {
-    throw new digibyte.errors.InvalidArgument('ENT', 'Values must be ENT > 128 and ENT % 32 == 0');
+    throw new auroracoin.errors.InvalidArgument('ENT', 'Values must be ENT > 128 and ENT % 32 == 0');
   }
 
   phrase = phrase || Mnemonic._mnemonic(ent, wordlist);
@@ -226,7 +226,7 @@ Mnemonic.fromSeed = function(seed, wordlist) {
  */
 Mnemonic.prototype.toHDPrivateKey = function(passphrase, network) {
   var seed = this.toSeed(passphrase);
-  return digibyte.HDPrivateKey.fromSeed(seed, network);
+  return auroracoin.HDPrivateKey.fromSeed(seed, network);
 };
 
 /**
@@ -314,12 +314,12 @@ Mnemonic._entropyChecksum = function(entropy) {
   return checksum;
 };
 
-Mnemonic.digibyte = digibyte;
+Mnemonic.auroracoin = auroracoin;
 
 module.exports = Mnemonic;
 
 }).call(this,require("buffer").Buffer)
-},{"./errors":1,"./pbkdf2":3,"./words":7,"buffer":58,"digibyte":"digibyte","unorm":166}],3:[function(require,module,exports){
+},{"./errors":1,"./pbkdf2":3,"./words":7,"buffer":58,"auroracoin":"auroracoin","unorm":166}],3:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -15190,12 +15190,12 @@ module.exports={
   "_requiredBy": [
     "/browserify-sign",
     "/create-ecdh",
-    "/digibyte"
+    "/auroracoin"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_spec": "elliptic@=6.4.0",
-  "_where": "/mnt/g/developer/digibyte/digiassets/digibytejs-mnemonic/node_modules/digibyte",
+  "_where": "/mnt/g/developer/auroracoin/digiassets/auroracoinjs-mnemonic/node_modules/auroracoin",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -23351,7 +23351,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":111}],"digibyte-mnemonic":[function(require,module,exports){
+},{"indexof":111}],"auroracoin-mnemonic":[function(require,module,exports){
 module.exports = require('./lib/mnemonic');
 
 },{"./lib/mnemonic":2}]},{},[]);

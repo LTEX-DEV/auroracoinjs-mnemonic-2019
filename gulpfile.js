@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp_digibyte = require('digibyte-build');
+var gulp_auroracoin = require('auroracoin-build');
 
-gulp_digibyte('mnemonic');
+gulp_auroracoin('mnemonic');
 
